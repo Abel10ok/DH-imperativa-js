@@ -1,0 +1,85 @@
+// Ejercicio 1: 
+
+
+const parImpar = (num1, num2) =>{
+    if(num1%2===0 && num2%2===0 && num1!==0 && num2!==0){ 
+        return num1/num2
+    }else if (num1%2!==0 && num2%2!==0){
+        return num1+num2
+    }
+    return -1
+}
+
+
+let resultado = parImpar(4,4)
+
+console.log(resultado);
+
+
+// Ejercicio 2:
+
+const boolNum = (bool, num) =>{
+    if(bool===true && num%5===0){
+        return num*2
+    }else if(bool===true){
+        return num/2
+    }
+    return num
+}
+
+
+let resultado2 = boolNum(false,8)
+
+console.log(resultado2);
+
+
+
+
+
+
+
+// Ejercicio 3
+
+let articulos = [
+    {
+        id: 4 ,
+        precio : 3321,
+        tipo : "Deportivo",
+        nombre: "Zapatillas"
+    },
+    {
+        id: 22 ,
+        precio: 4482,
+        tipo : "Moda",
+        nombre: "Zapatillas"
+    },
+    {
+        id: 1 ,
+        precio: 3600,
+        tipo : "Moda",
+        nombre: "Zapatos"
+    },
+    {
+        id: 44 ,
+        precio: 8889,
+        tipo : "Moda",
+        nombre: "Remera"
+    },
+]
+
+
+const filtrarArticulo = (array,desc,num)=>{
+    let nuevo = []
+
+    for(let i=0;i<array.length;i++){
+        if(array[i].tipo===desc && array[i].precio<=num){
+            nuevo.push(array[i])
+        }
+    }
+    return nuevo
+}
+
+
+let resultado3= filtrarArticulo(articulos,"Deportivo",5000)
+
+console.log(resultado3);
